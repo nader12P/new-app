@@ -12,7 +12,7 @@ pipeline {
                     
                     sh "echo \${DOCKER_REGISTRY_PASSWORD} | docker login -u \${DOCKER_REGISTRY_USERNAME} --password-stdin"
 
-                    sh "docker push nader12repo/new-app:v1"
+                    sh "docker push nader12bp/nader12repo/new-app:v1"
                 }
             }
         }
