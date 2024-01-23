@@ -19,7 +19,8 @@ pipeline {
         // }
         stage('Deploy to OpenShift Cluster') {
             steps {
-                     sh "oc get pods"
+                     sh "oc project nader"
+                     sh "oc new-app nader12bp/new-app:v1"
             }
         }
     }
