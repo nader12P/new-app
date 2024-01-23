@@ -19,7 +19,9 @@ pipeline {
         // }
         stage('Deploy to OpenShift Cluster') {
             steps {
-                 sh "oc get pods"
+                 withCredentials([string(credentialsId: 'openshift', variable: 'OPENSHIFT_SECRET')]) {
+                     sh "oc get pods"
+                }
             }
         }
     }
