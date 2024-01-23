@@ -20,7 +20,6 @@ pipeline {
         stage('Deploy to OpenShift Cluster') {
             steps {
                  sh "oc get pods"
-                }
             }
         }
     }
