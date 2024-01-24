@@ -22,6 +22,7 @@ pipeline {
             steps {
                      sh "oc project nader"
                      sh "oc new-app nader12bp/new-app:v1"
+                     sh "oc expose svc/new-app"
             }
         }
     }
